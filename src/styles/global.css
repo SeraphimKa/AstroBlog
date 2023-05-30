@@ -18,10 +18,28 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  color: purple;
 }
 
 a {
   transition: 0.25s;
+}
+
+p {
+  font-family: "Playfair", serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+ul {
+  border-left: 1px solid red;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  padding-left: 1rem;
 }
 
 .subtitle {
@@ -61,11 +79,13 @@ a {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: gray;
 }
 
 .nav-links a:hover,
 a:focus {
-  background-color: #76a6ff;
+  color: black;
+  outline: 1px solid purple;
 }
 
 .expanded {

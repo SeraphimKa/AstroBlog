@@ -12,12 +12,13 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Playfair&display=swap"
+      rel="stylesheet"
+    />
     <title>{pageTitle}</title>
-    <style>
-      h1 {
-        color: purple;
-      }
-    </style>
   </head>
   <body>
     <Header />
