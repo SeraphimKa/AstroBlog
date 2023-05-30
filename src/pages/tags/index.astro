@@ -3,11 +3,52 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 //Tags Index
 
-const pageTitle = "Tag search";
+const pageTitle = "Tag Search";
+
+const allPosts = await Astro.glob("../posts/*.md");
+
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 ---
 
-<BaseLayout url={"/tags/"} title={pageTitle}>
-  <div class="">Hello Tags :)</div>
-
-  <p>nice</p>
+<BaseLayout pageTitle={pageTitle}>
+  <h2 class="subtitle">...Tags:</h2>
+  <div class="tags">
+    {
+      tags.map((tag) => (
+        <div class="tag"><a href=`/tags/${tag}` >{tag}</a></div>
+      ))
+    }
+  </div>
 </BaseLayout>
+
+<style>
+
+a {
+    text-decoration: none;
+    color: #ee3300;
+    padding: 10px;
+    background: rgb(43, 43, 43);
+  }
+  a:hover {
+    background-color: aquamarine;
+  }
+
+  .tags {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 0 auto;  
+  }
+
+  .tag {
+    color: red;
+    margin: 0.25em;
+    text-decoration:none;
+    padding: .5em .5em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
+  tag:hover {
+    border: solid 1px purple;
+  }
+
+</style>
