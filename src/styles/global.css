@@ -20,6 +20,15 @@ h1 {
   font-size: 2.5rem;
 }
 
+a {
+  transition: 0.25s;
+}
+
+.subtitle {
+  color: #ee3300;
+  font-style: italic;
+}
+
 /* nav styles */
 
 .hamburger {
@@ -56,7 +65,7 @@ h1 {
 
 .nav-links a:hover,
 a:focus {
-  background-color: #ff9776;
+  background-color: #76a6ff;
 }
 
 .expanded {

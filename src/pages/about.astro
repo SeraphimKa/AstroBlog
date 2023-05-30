@@ -32,20 +32,8 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-</style>
-
 <BaseLayout pageTitle={pageTitle}>
-  <h2>... and my new Blog!</h2>
+  <h2 class="subtitle">... and my new Blog!</h2>
 
   <p>
     i am working through Astro's introductory tutorial, this is the second page
@@ -53,19 +41,19 @@ const textCase = "uppercase";
   </p>
 
   <p>
-    This site will updeate as I complete more of the tutorial, so keep checking
+    This site will update as I complete more of the tutorial, so keep checking
     back and see how my journey is going!
   </p>
 
   <p>Here are a few facts about me:</p>
   <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>
+    <li class="identity-item">My name is {identity.firstName}.</li>
+    <li class="identity-item">
       I live in {identity.country} and I work as a {identity.occupation}.
     </li>
     {
       identity.hobbies.length >= 2 && (
-        <li>
+        <li class="identity-item">
           Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
         </li>
       )
@@ -87,4 +75,26 @@ const textCase = "uppercase";
       <p>My goal is not 3 days.</p>
     )
   }
+
+  <style define:vars={{ skillColor, fontWeight, textCase }}>
+    .skill {
+      color: var(--skillColor);
+      font-weight: var(--fontWeight);
+      text-transform: var(--textCase);
+    }
+    .identity-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style-type: none;
+      font-weight: 600;
+      color: darkred;
+      background: pink;
+      padding: 5px;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-bottom: 3px;
+    }
+  </style>
 </BaseLayout>
