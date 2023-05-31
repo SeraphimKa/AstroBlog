@@ -1,7 +1,8 @@
 lockfileVersion: "6.1"
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
+  strictPeerDependencies: false
   excludeLinksFromLockfile: false
 
 dependencies:
