@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #d3dbe2;
   font-family: sans-serif;
 }
 
@@ -109,4 +109,30 @@ a:focus {
   .hamburger {
     display: none;
   }
+}
+
+/* tag style */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.tag {
+  color: red;
+  margin: 0.25em;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  font-size: 1.15em;
+  background-color: #f8fcfd;
+}
+.tag a {
+  text-decoration: none;
+  color: #ee3300;
+  padding: 10px;
+  background: rgb(43, 43, 43);
+}
+.tag a:hover {
+  background-color: aquamarine;
 }

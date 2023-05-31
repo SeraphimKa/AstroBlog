@@ -1,6 +1,12 @@
 ---
+//components
 import BlogPost from "../../components/BlogPost.astro";
+
+//layouts
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+//types
+import Post from "../../types/post";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../posts/*.md"); // Get all Posts
@@ -32,7 +38,7 @@ const { posts } = Astro.props;
   <h2 class="subtitle">Posts tagged with {tag}</h2>
   <ul>
     {
-      posts.map((post) => (
+      posts.map((post: Post) => (
         <BlogPost url={post.url} title={post.frontmatter.title} />
       ))
     }

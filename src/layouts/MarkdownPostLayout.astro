@@ -7,14 +7,13 @@ const { frontmatter } = Astro.props;
   <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
   <p>Written by {frontmatter.author}</p>
   <p><em>{frontmatter.description}</em></p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <div class="tags">
   {
-    frontmatter.image && (
-      <img
-        src={frontmatter.image.url}
-        width="300"
-        alt={frontmatter.image.alt}
-      />
-    )
+  frontmatter.tags.map((tag) => (
+  <div class="tag"><a href=`/tags/${tag}` >{tag}</a></div>))
   }
-  <slot />
+  </div>
+    <slot />
+  </div>
 </BaseLayout>
