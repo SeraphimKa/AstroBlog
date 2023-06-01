@@ -22,10 +22,11 @@ const devSkills = [
 ];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
-const skillColor = "navy";
+let skillColor = "navy";
+
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -73,12 +74,20 @@ const textCase = "uppercase";
       <p>My goal is not 3 days.</p>
     )
   }
+  <p>Update: I finished in 2 days!</p>
 
   <style define:vars={{ skillColor, fontWeight, textCase }}>
     .skill {
       color: var(--skillColor);
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
+      background-color: #8855aa80;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+      width: 10rem;
     }
     .identity-item {
       display: flex;

@@ -59,7 +59,7 @@ ul li {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #ee3300;
 }
 
 .nav-links {
@@ -92,7 +92,16 @@ a:focus {
   display: unset;
 }
 
-@media screen and (min-width: 636px) {
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+@media screen and (width > 636px) {
   .nav-links {
     margin-left: 5em;
     display: block;
@@ -125,7 +134,7 @@ a:focus {
   text-decoration: none;
   padding: 0.5em 0.5em;
   font-size: 1.15em;
-  background-color: #f8fcfd;
+  background-color: #f8fcfd40;
 }
 .tag a {
   text-decoration: none;
