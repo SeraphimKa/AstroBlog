@@ -1,8 +1,8 @@
 export default interface Post {
-  url: string;
-  frontmatter: {
+  slug: string;
+  data: {
     title: string;
-    pubDate: string;
+    pubDate: Date;
     author: string;
     description: string;
     image: {
