@@ -3,7 +3,11 @@ import { getCollection } from "astro:content";
 import BlogPost from "../components/BlogPost.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const allPosts = await getCollection("posts");
+const allPosts = (
+  await getCollection("posts", ({ data }) => {
+    return data.draft !== true;
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pageTitle = "My Astro Learning Blog";
 ---
 

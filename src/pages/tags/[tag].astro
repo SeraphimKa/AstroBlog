@@ -10,7 +10,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Post from "../../types/post";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("posts"); // Get all Posts
+  const allPosts = (
+    await getCollection("posts", ({ data }) => {
+      return data.draft !== true;
+    })
+  ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()); // Get all Posts
 
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
