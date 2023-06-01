@@ -31,11 +31,11 @@
           "type": "string"
         },
         {
-          "title": "Content preview",
-          "name": "heroImage",
+          "title": "Image",
+          "name": "image",
           "fields": [
             {
-              "title": "Image",
+              "title": "Url",
               "name": "url",
               "type": "string"
             },

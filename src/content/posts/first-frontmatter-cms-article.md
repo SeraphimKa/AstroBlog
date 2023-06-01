@@ -14,7 +14,7 @@ keywords:
   - frontmattercms
 slug: frontmattercms-post
 author: SeraphimKa
-draft: true
+draft: false
 ---
 
 # My first FrontmatterCMS post

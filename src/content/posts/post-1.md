@@ -6,11 +6,16 @@ image:
   url: https://docs.astro.build/assets/full-logo-light.png
   alt: The full Astro logo.
 pubDate: 2022-07-01
-tags: ["first", "astro", "blogging", "learning in public"]
+tags:
+  - first
+  - astro
+  - blogging
+  - learning in public
 keywords:
   - First
 draft: false
 slug: blog-post
+sortOrder: 1
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
