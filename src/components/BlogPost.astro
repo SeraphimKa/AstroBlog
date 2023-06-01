@@ -2,22 +2,22 @@
 const { url, title } = Astro.props;
 ---
 
-<li>
+<li class="blog-list">
   <a href={url}>{title}</a>
 </li>
 
 <style>
-  li {
+  .blog-list {
     list-style-type: none;
     padding: 10px;
   }
-  a {
+  .blog-list a {
     text-decoration: none;
     color: #ee3300;
     padding: 10px;
     background: rgb(43, 43, 43);
   }
-  a:hover {
+  .blog-list a:hover {
     background-color: aquamarine;
   }
 </style>
